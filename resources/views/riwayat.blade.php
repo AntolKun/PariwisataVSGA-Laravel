@@ -66,7 +66,7 @@
                                     <div class="row">
                                         <!-- <button type="button" class="btn btn-primary waves-effect waves-light">Edit</button> -->
                                         <div class="col-lg-6">
-                                            <button type="button" class="btn btn-primary waves-effect waves-light"><a href="#" ></a>Edit</button>
+                                            <a href="{{ route('pesan.edit', $b->id) }}" class="btn btn-primary waves-effect waves-light">Edit</a>
                                         </div>
                                         <div class="col-lg-6">
                                             <form action="/riwayatDelete/{{ $b->id }}" method="POST">

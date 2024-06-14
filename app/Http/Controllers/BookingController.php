@@ -82,6 +82,43 @@ class BookingController extends Controller
             return back()->with("error", "Data Gagal Terhapus");
         }
     }
+
+    public function edit($id) {
+        $pesanan = Booking::findOrFail($id);
+        return view('editPesan', compact('pesanan'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Validasi data yang dikirim dari form
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'notelp' => 'required|string|max:20',
+            'tanggal' => 'required|date',
+            'durasi' => 'required|integer|min:1',
+            'tipe_kamar' => 'required|string|in:Deluxe,Standard',
+            'smoking_room' => 'nullable|boolean',
+            'breakfast' => 'nullable|boolean',
+        ]);
+
+        // Proses penyimpanan data setelah validasi sukses
+        $pesanan = Booking::findOrFail($id); // Temukan pesanan berdasarkan $id
+        $pesanan->nama = $request->nama;
+        $pesanan->notelp = $request->notelp;
+        $pesanan->tanggal = $request->tanggal;
+        $pesanan->durasi = $request->durasi;
+        $pesanan->tipe_kamar = $request->tipe_kamar;
+        $pesanan->smoking_room = $request->has('smoking_room');
+        $pesanan->breakfast = $request->has('breakfast');
+        $updated = $pesanan->save();
+
+        if ($updated) {
+            //redirect to index
+            return back()->with("success", "Data Berhasil Terupdate");
+        } else {
+            return back()->with("error", "Data Gagal Update");
+        }
+    }
 }
 
 

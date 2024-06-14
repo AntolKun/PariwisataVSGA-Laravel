@@ -156,9 +156,9 @@
             let totalPaket = 0;
 
             if (deluxeRadio.checked) {
-                totalPaket += 1000000; // Fixed value for Deluxe Room
+                totalPaket += 1000000; // Fixed value untuk Deluxe Room
             } else if (standardRadio.checked) {
-                totalPaket += 800000; // Fixed value for Standard Room
+                totalPaket += 800000; // Fixed value untuk Standard Room
             }
 
             if (smokingRoomCheckbox.checked) {

@@ -23,3 +23,5 @@ Route::get('/pesan', [BookingController::class, 'index'])->name('pesan');
 Route::post('/pesan/store', [BookingController::class, 'store'])->name('booking.store');
 Route::get('/riwayat', [BookingController::class, 'getBooking'])->name('riwayat');
 Route::delete('/riwayatDelete/{id}', [BookingController::class, 'destroy'])->name('deleteRiwayat');
+Route::get('/pesan/{id}/edit', [BookingController::class, 'edit'])->name('pesan.edit');
+Route::put('/pesan/{id}', [BookingController::class, 'update'])->name('pesan.update');
