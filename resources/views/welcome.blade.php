@@ -6,13 +6,14 @@
 @section('content')
 
 <div class="row">
-	<div class="col-lg-8 d-flex align-items-stretch pt-4 px-4">
+	<div class="col-lg-8 pt-4 px-4">
 		<div class="card w-100">
 			<div class="card-body p-4">
+				<h2>Rekomendasi tempat wisata di Lampung</h2>
 				<div class="row mt-4">
 					<div class="col-lg-4 mt-4">
 						<div class="card">
-							<img class="card-img-top img-responsive" style="width: 332px; height: 250px;" src="https://awsimages.detik.net.id/community/media/visual/2023/05/11/pulau-pahawang-lampung_169.jpeg?w=1200" alt="Card image cap" />
+							<img class="card-img-top img-responsive" src="https://asset.kompas.com/crops/JH2snjV8P4cK14NBik5YQMbiB3w=/15x153:704x613/750x500/data/photo/2023/06/24/64971eeb98ff8.jpeg" alt="Card image cap" />
 							<div class="card-body">
 								<h4 class="card-title">Pulau Pahawang</h4>
 								<p class="card-text">
@@ -25,7 +26,7 @@
 
 					<div class="col-lg-4 mt-4">
 						<div class="card">
-							<img class="card-img-top img-responsive" style="width: 332px; height: 250px;" src="https://asset.kompas.com/crops/ADE0-xNCNyAIvoRpndo5Oy7zE7k=/0x0:0x0/750x500/data/photo/2023/08/07/64d08ba053ec3.jpg" alt="Card image cap" />
+							<img class="card-img-top img-responsive" src="https://asset.kompas.com/crops/ADE0-xNCNyAIvoRpndo5Oy7zE7k=/0x0:0x0/750x500/data/photo/2023/08/07/64d08ba053ec3.jpg" alt="Card image cap" />
 							<div class="card-body">
 								<h4 class="card-title">Teluk Hantu</h4>
 								<p class="card-text">
@@ -38,7 +39,7 @@
 
 					<div class="col-lg-4 mt-4">
 						<div class="card">
-							<img class="card-img-top img-responsive" style="width: 332px; height: 250px;" src="https://asset.kompas.com/crops/JH2snjV8P4cK14NBik5YQMbiB3w=/15x153:704x613/750x500/data/photo/2023/06/24/64971eeb98ff8.jpeg" alt="Card image cap" />
+							<img class="card-img-top img-responsive" src="https://asset.kompas.com/crops/JH2snjV8P4cK14NBik5YQMbiB3w=/15x153:704x613/750x500/data/photo/2023/06/24/64971eeb98ff8.jpeg" alt="Card image cap" />
 							<div class="card-body">
 								<h4 class="card-title">Pulau Tegal Mas</h4>
 								<p class="card-text">

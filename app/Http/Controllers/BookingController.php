@@ -68,6 +68,20 @@ class BookingController extends Controller
         $data["booking"] = Booking::get();
         return view("riwayat", $data);
     }
+
+    public function destroy($id)
+    {
+        //Delete data dari database
+        $booking = Booking::findOrFail($id);
+        $booking->delete();
+
+        if ($booking) {
+            //redirect to index
+            return back()->with("success", "Data Berhasil Terhapus");
+        } else {
+            return back()->with("error", "Data Gagal Terhapus");
+        }
+    }
 }
 
 

@@ -28,6 +28,7 @@
                                 <th>Smoking Room</th>
                                 <th>Breakfast</th>
                                 <th>Tagihan</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -61,6 +62,21 @@
                                     @endif
                                 </td>
                                 <td>Rp. {{ $b->jumlah_tagihan }}</td>
+                                <td>
+                                    <div class="row">
+                                        <!-- <button type="button" class="btn btn-primary waves-effect waves-light">Edit</button> -->
+                                        <div class="col-lg-6">
+                                            <button type="button" class="btn btn-primary waves-effect waves-light"><a href="#" ></a>Edit</button>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <form action="/riwayatDelete/{{ $b->id }}" method="POST">
+                                                @csrf
+                                                @method("DELETE")
+                                                <button type="submit" class="btn btn-danger waves-effect waves-light">Hapus</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
@@ -92,5 +108,26 @@
 <script src="{{ asset('dist/libs/prismjs/prism.js') }}"></script>
 <script src="{{ asset('dist/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('dist/js/datatable/datatable-basic.init.js')}}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if ($message = session()->get('success'))
+<script type="text/javascript">
+    Swal.fire({
+        icon: 'success',
+        title: 'Sukses!',
+        text: '{{ $message }}',
+    })
+</script>
+@endif
+
+@if ($message = session()->get('error'))
+<script type="text/javascript">
+    Swal.fire({
+        icon: 'error',
+        title: 'Waduh!',
+        text: '{{ $message }}',
+    })
+</script>
+@endif
 @stop
 @endsection
